@@ -1,0 +1,147 @@
+//main: ..//style.less
+
+.b6 {
+    padding: 90px 0;
+
+    .b6_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 22px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        h3 {
+            margin-top: 80px;
+            margin-bottom: 30px;
+            font-size: 29px;
+        }
+
+        .b6_start {
+            width: 600px;
+        }
+
+        .b6_list {
+            &::after {
+                content: "";
+                display: block;
+                border-bottom: 5px solid #F53469;
+                width: 200px;
+                padding-top: 30px;
+            }
+
+            .b6_item {
+                display: flex;
+                margin-bottom: 35px;
+
+                p {
+                    font-weight: 700;
+                    color: #F53469;
+                }
+
+                img {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .b6__sheet {
+
+            .b6_sheet_item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                font-style: italic;
+
+                p {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .b6_end {
+            width: 500px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .b6_btn {
+            width: 255px;
+            margin: 30px auto;
+        }
+
+    }
+}
+
+
+@media (max-width:1024px) {
+    .b6 {
+        .b6_wrapper {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (max-width:966px) {
+    .b6 {
+        .b6_wrapper {
+            padding: 0;
+            flex-direction: column;
+            width: 600px;
+            margin: 0 auto;
+
+            .b6_list {
+                &::after {
+                    content: "";
+                    margin: 30px auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .b6 {
+        padding: 60px 0;
+        background-image: none;
+
+        .b6_wrapper {
+            width: 300px;
+            text-align: center;
+
+            h2 {
+                font-size: 19px;
+            }
+
+            .b6_start {
+                width: auto;
+                margin-bottom: 30px;
+            }
+
+            .b6_end {
+                width: auto;
+            }
+
+            .b6_list {
+                .b6_item {
+                    flex-direction: column;
+
+                    p {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
